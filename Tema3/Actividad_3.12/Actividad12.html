@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+    <style>
+        audio {
+            width: 300px;
+            height: 40px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #e8f5e9;
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-pause-button {
+            background-color: #4CAF50;
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: #81C784;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="audio-title">Reproductor de música de fondo</h1>
+
+    <!-- Control de audio con atributos ARIA -->
+    <audio 
+        aria-labelledby="audio-title" 
+        aria-live="polite" 
+        aria-controls="audio-player-controls" 
+        autoplay 
+        loop 
+        controls>
+        <!-- Formatos de audio -->
+        <source src="audios/mp3.mp3" type="audio/mpeg">
+        <source src="audios/ogg.ogg" type="audio/ogg">
+        <source src="audios/wav.wav" type="audio/wav">
+        <!-- Mensaje para navegadores no compatibles -->
+        Tu navegador no admite la etiqueta <code>audio</code>. Por favor, actualízalo a una versión más moderna.
+    </audio>
+</body>
+</html>

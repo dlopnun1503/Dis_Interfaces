@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .video-container {
+            width: 640px;
+            height: 480px;
+            margin: 20px auto;
+            border: 2px solid black;
+            position: relative;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reproductor de Video</h1>
+    <div class="video-container">
+        <video id="video" poster="caratula.jpg">
+            <source src="Actividad_3.16.mp4" type="video/webm">
+            <source src="Actividad_3.16.mp4" type="video/mp4">
+            <source src="Actividad_3.16.mp4" type="video/ogg">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+    
+    <div class="controls">
+        <button onclick="playVideo()">Reproducir</button>
+        <button onclick="pauseVideo()">Pausar</button>
+        <button onclick="stopVideo()">Detener</button>
+    </div>
+    
+    <p>
+        <a href="Actividad_3.16.mp4" download>Descargar Video</a> | 
+        <a href="Actividad_3.16.mp4" target="_blank">Ver en nueva página</a>
+    </p>
+    
+    <script>
+        const video = document.getElementById("video");
+        
+        function playVideo() {
+            video.play();
+        }
+        
+        function pauseVideo() {
+            video.pause();
+        }
+        
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
