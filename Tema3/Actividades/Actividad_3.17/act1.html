@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+    <style>
+        h1 {
+            display: flex;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+        .p {
+            font-size: 20px;
+            animation: mover 8s linear 1s 2 alternate forwards;
+        }
+        @keyframes mover {
+            0% { transform: translateX(0); font-size: 20px; color: red; }
+            25% { transform: translateX(25vw); font-size: 40px; color: blue; }
+            50% { transform: translateX(50vw); font-size: 60px; color: green; }
+            75% { transform: translateX(75vw); font-size: 80px; color: purple; }
+            100% { transform: translateX(100vw); font-size: 100px; color: orange; }
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="p">p</span></h1>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones Estilizados</title>
+    <style>
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            background-color: green;
+        }
+        .button.si {
+            color: blue;
+        }
+        .button.no {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button si">Sí</button>
+        <button class="button no">No</button>
+    </div>
+</body>
+</html>

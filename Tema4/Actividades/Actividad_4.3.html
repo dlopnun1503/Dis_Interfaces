@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4.3</title>
+    <style>
+        details {
+          transition: all 0.5s ease-in-out;
+        }
+        
+        details[open] summary ~ * {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        </style>
+</head>
+<body>
+    <details>
+        <summary>Mostrar más</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis in minus voluptates mollitia placeat odit
+            expedita aliquam modi iusto, natus error illum tenetur velit sint vitae possimus fugiat hic alias?</p>
+      </details>
+</body>
+</html>
